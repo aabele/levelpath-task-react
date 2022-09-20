@@ -12,7 +12,7 @@ const zfill = (data: any) => String(data).padStart(2, '0');
 const BASE_API = 'https://en.wikipedia.org/api/rest_v1/feed/onthisday/all';
 // https://en.wikipedia.org/api/rest_v1/feed/onthisday/all/01/01
 
-const getDateUrl = (date: Date = new Date()): string => {
+export const getDateUrl = (date: Date = new Date()): string => {
   const day = zfill(date.getDate());
   const month = zfill(date.getMonth() + 1);
   return `${BASE_API}/${month}/${day}`;
